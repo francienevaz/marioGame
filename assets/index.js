@@ -7,7 +7,7 @@ function handleFile(req, res, callback){
     let path = url.parse(req.url).pathname;    
 
     if (path == "" || path == "/") {
-        path = "../index.html"
+        path = "/index.html"
     }
     let fileName = "." + path;
 
