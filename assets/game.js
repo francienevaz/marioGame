@@ -1,6 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
+const btn = document.querySelector('#btn');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -32,8 +33,17 @@ const loop = setInterval(() => {
 
         clouds.style.animation = 'none';
         clouds.style.left = `${cloudsPosition}px`;
+        
+        btn.style.display = "block";
+
+        // Recarregar a página =>
+        btn.addEventListener('click', () => {
+            
+            location.reload();
+        })
 
         clearInterval(loop);
+
     }
 
 }, 10)
